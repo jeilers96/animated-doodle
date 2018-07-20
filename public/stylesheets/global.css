@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Limelight-Regular;
+  src: url('/fonts/Limelight-Regular.ttf');
+}
+
+body {
+  padding: 0.5rem;
+  background-color: #151618;
+  color: #CFB53B;
+  text-align: center;
+  font-family: Limelight-Regular;
+}
+
+hr {
+  display: inline-block;
+  width: 13rem;
+  margin: 0.25rem 0.5rem;
+  border-top: 1px solid #e5e5e5;
+  border-color: #CFB53B;
+}
+
+h1 {
+  font-size: 3rem;
+}
+a {
+  color: #00B7FF;
+}
