@@ -7,11 +7,13 @@ body {
   padding: 0.5rem;
   background-color: #151618;
   color: #CFB53B;
-  text-align: center;
   font-family: Limelight-Regular;
 }
 
-hr {
+a {
+  display: block;
+}
+.title-rule {
   display: inline-block;
   width: 13rem;
   margin: 0.25rem 0.5rem;
@@ -19,13 +21,31 @@ hr {
   border-color: #CFB53B;
 }
 
-h1 {
+.title {
+  text-align: center;
   font-size: 3rem;
 }
-a {
-  color: #00B7FF;
+
+.film-image {
+  width: 10rem;
 }
 
-img {
-  width: 10rem;
+/*small breakpoint*/
+@media only screen and (min-width : 480px) {
+
+}
+
+/*medium breakpoint*/
+@media only screen and (min-width : 768px) {
+
+}
+
+/*large breakpoint*/
+@media only screen and (min-width : 992px) {
+
+}
+
+/*extra large breakpoint*/
+@media only screen and (min-width : 1200px) {
+
 }

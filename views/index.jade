@@ -1,8 +1,17 @@
 extends layout
 
 block content
-  h1
-    hr
+  h1(class="title")
+    hr(class="title-rule")
     |#{title}
-    hr
-  p Welcome to #{title}
+    hr(class="title-rule")
+    
+  div(class="filter")
+    a(href="/") All
+    - each genre in genres
+      a(href="/genre/#{genre.name}") #{genre.name}
+
+
+  div
+    - each film in filmlist
+      img(src="#{film.Image}" title="#{film.Title}" class="film-image")
