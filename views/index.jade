@@ -5,13 +5,30 @@ block content
     hr(class="title-rule")
     |#{title}
     hr(class="title-rule")
-    
-  div(class="filter")
-    a(href="/") All
-    - each genre in genres
-      a(href="/genre/#{genre.name}") #{genre.name}
 
+  div(class="filter")
+    |Genre:
+    button(type='button' onclick='dropdown("genres");') #{currentGenre}
+    div(class="filter-items" id="genres")
+      a(href="/") All
+      - each genre in genres
+        - var url = '?genre='+ genre
+        a(href=url) #{genre}
+
+  div(class="filter")
+    |Sort by:
+    button(type='button' onclick='dropdown("sortby");') select
+    div(class="filter-items" id="sortby")
+      a(href="?sortby=alphabetical") Alphabetical
+      a(href="?sortby=releaseYear") Release Year
+      a(href="?sortby=Runtime") Runtime
 
   div
     - each film in filmlist
       img(src="#{film.Image}" title="#{film.Title}" class="film-image")
+
+  script.
+    function dropdown(type) {
+      console.log("hello")
+      document.getElementById(type).classList.toggle("show")
+    }

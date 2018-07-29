@@ -30,6 +30,14 @@ a {
   width: 10rem;
 }
 
+.filter-items {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 /*small breakpoint*/
 @media only screen and (min-width : 480px) {
 
