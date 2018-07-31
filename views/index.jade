@@ -19,9 +19,12 @@ block content
     |Sort by:
     button(type='button' onclick='dropdown("sortby");') select
     div(class="filter-items" id="sortby")
-      a(href="?sortby=alphabetical") Alphabetical
-      a(href="?sortby=releaseYear") Release Year
-      a(href="?sortby=Runtime") Runtime
+      a(href="?sortby=alphabetical") Alphabetical (A-Z)
+      a(href="?sortby=alphabeticalRev") Alphabetical (Z-A)
+      a(href="?sortby=releaseYear") Release Year (Oldest-Newest)
+      a(href="?sortby=releaseYearRev") Release Year (Newest-Oldest)
+      a(href="?sortby=Runtime") Runtime (Shortest-Longest)
+      a(href="?sortby=RuntimeRev") Runtime (Longest-Shortest)
 
   div
     - each film in filmlist
