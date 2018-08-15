@@ -6,25 +6,35 @@ block content
     |#{title}
     hr(class="title-rule")
 
-  div(class="filter")
-    |Genre:
-    button(type='button' onclick='dropdown("genres");') #{currentGenre}
-    div(class="filter-items" id="genres")
-      a(href="/") All
-      - each genre in genres
-        - var url = '?genre='+ genre
-        a(href=url) #{genre}
+  div(class="filters")
+    div(class="filter")
+      |Genre:
+      button(type='button' onclick='dropdown("genres");') #{currentGenre}
+      div(class="filter-items" id="genres")
+        a(href="/") All
+        - each genre in genres
+          - var url = '?genre=' + genre
+          a(href=url) #{genre}
+          
+    div(class="filter")
+      |Director:
+      button(type='button' onclick='dropdown("directors");') #{currentDirector}
+      div(class="filter-items" id="directors")
+        a(href="/") All
+        - each director in directors
+          -var url = '?director=' + director
+          a(href=url) #{director}
 
-  div(class="filter")
-    |Sort by:
-    button(type='button' onclick='dropdown("sortby");') select
-    div(class="filter-items" id="sortby")
-      a(href="?sortby=alphabetical") Alphabetical (A-Z)
-      a(href="?sortby=alphabeticalRev") Alphabetical (Z-A)
-      a(href="?sortby=releaseYear") Release Year (Oldest-Newest)
-      a(href="?sortby=releaseYearRev") Release Year (Newest-Oldest)
-      a(href="?sortby=Runtime") Runtime (Shortest-Longest)
-      a(href="?sortby=RuntimeRev") Runtime (Longest-Shortest)
+    div(class="filter")
+      |Sort by:
+      button(type='button' onclick='dropdown("sortby");') select
+      div(class="filter-items" id="sortby")
+        a(href="?sortby=alphabetical") Alphabetical (A-Z)
+        a(href="?sortby=alphabeticalRev") Alphabetical (Z-A)
+        a(href="?sortby=releaseYear") Release Year (Oldest-Newest)
+        a(href="?sortby=releaseYearRev") Release Year (Newest-Oldest)
+        a(href="?sortby=Runtime") Runtime (Shortest-Longest)
+        a(href="?sortby=RuntimeRev") Runtime (Longest-Shortest)
 
   div
     - each film in filmlist
