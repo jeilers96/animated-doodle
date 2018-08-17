@@ -10,9 +10,6 @@ body {
   font-family: Limelight-Regular;
 }
 
-a {
-  display: block;
-}
 .title-rule {
   display: inline-block;
   width: 13rem;
@@ -34,8 +31,26 @@ a {
   display: none;
 }
 
+.filter-items a {
+  display: block;
+}
+
 .show {
   display: block;
+}
+
+footer {
+  background-color: #2A2B2D;
+  color: #CFB53B;
+  text-align: center;
+  display: block;
+  padding: .5rem;
+  margin: 1rem -1rem -1rem -1rem;
+}
+
+footer p a {
+  color: #CFB53B;
+  text-decoration: underline;
 }
 
 /*small breakpoint*/
